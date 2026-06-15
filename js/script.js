@@ -13,3 +13,14 @@ function formatCurrency(amount) {
         currency: "BRL",
     });
 }
+
+function saveData() {
+    localStorage.setItem("visionwallet", JSON.stringify(transactions));
+}
+
+function updateUI() {
+    list.innerHTML = "";
+
+    let income = 0;
+    let expense = 0;
+}
