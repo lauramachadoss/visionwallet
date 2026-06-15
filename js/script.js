@@ -71,3 +71,21 @@ function updateUI() {
 
     saveData();
 }
+
+function animateValue(el, newValue) {
+    const formattedValue = formatCurrency(newValue);
+    el.style.opacity = "0.5";
+
+    setTimeout(() => {
+        el.textContent = formattedValue;
+        el.style.opacity = "1";
+        el.style.transition = "opacity 0.3s ease";
+    }, 100);
+}
+
+function removeTransaction(index) {
+    if (confirm("Tem certeza que deseja deletar esta transação?")) {
+        transactions.splice(index, 1);
+        updateUI();
+    }
+}
