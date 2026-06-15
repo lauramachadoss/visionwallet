@@ -89,3 +89,40 @@ function removeTransaction(index) {
         updateUI();
     }
 }
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const description = document.getElementById("description").value.trim();
+    const amount = parseFloat(document.getElementById("amount").value);
+    const category = document.getElementById("category").value;
+    const type = document.getElementById("type").value;
+
+    if (!description || amount <= 0) {
+        alert("Por favor, preencha todos os campos corretamente!");
+        return;
+    }
+
+    transactions.push({
+        description,
+        amount,
+        category,
+        type,
+        date: new Date().toLocaleDateString("pt-BR"),
+    });
+
+    form.reset();
+    document.getElementById("description").focus();
+    updateUI();
+
+    const btn = form.querySelector(".btn-submit");
+    btn.style.transform = "scale(0.95)";
+    setTimeout(() => {
+        btn.style.transform = "scale(1)";
+    }, 200);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    updateUI();
+    document.getElementById("description").focus();
+});
