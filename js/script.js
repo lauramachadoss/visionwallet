@@ -7,3 +7,9 @@ const expenseEl = document.getElementById("expense");
 
 let transactions = JSON.parse(localStorage.getItem("visionwallet")) || [];
 
+function formatCurrency(amount) {
+    return amount.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+    });
+}
