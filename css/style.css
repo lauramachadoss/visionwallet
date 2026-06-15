@@ -452,3 +452,103 @@ select {
 .transaction-expense>div:last-child {
     color: #ef4444;
 }
+
+.delete-btn {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.delete-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 30px;
+        padding: 30px 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-submit {
+        grid-column: 1;
+    }
+
+    .transaction {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .transaction>div:last-child {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .card h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .history-header h2 {
+        font-size: 1.3rem;
+    }
+}
