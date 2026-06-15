@@ -324,3 +324,131 @@ select {
     background-position: right 12px center;
     padding-right: 36px;
 }
+
+.btn-submit {
+    grid-column: 1 / -1;
+    padding: 16px 32px;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(102, 126, 234, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ===== HISTORY SECTION ===== */
+.history {
+    animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.history-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.history-header h2 {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.history-header i {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.history-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.transaction-list {
+    list-style: none;
+}
+
+.transaction {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border: 1px solid var(--border-color);
+    padding: 18px 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.transaction:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(5px);
+}
+
+.transaction strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.transaction small {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.transaction-income {
+    border-left-color: #10b981;
+}
+
+.transaction-expense {
+    border-left-color: #ef4444;
+}
+
+.transaction>div:last-child {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.transaction>div:last-child .amount {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.transaction-income h2,
+.transaction>div:last-child {
+    color: #10b981;
+}
+
+.transaction-expense h2,
+.transaction-expense>div:last-child {
+    color: #ef4444;
+}
